@@ -8,6 +8,24 @@ Download in DCS page - https://www.digitalcombatsimulator.com/en/files/3349920/
 
 ![Tucano](Doc/tucano.jpg)
 
+![Tucano](Doc/T-08.jpg)
+
+![Tucano](Doc/T-05.jpg)
+
+![Tucano](Doc/T-07.jpg)
+
+![Tucano](Doc/T-02.jpg)
+
+![Tucano](Doc/T-01.jpg)
+
+![Tucano](Doc/T-03.jpg)
+
+![Tucano](Doc/T-04.jpg)
+
+![Tucano](Doc/AT-02.jpg)
+
+![Tucano](Doc/AT-01.jpg)
+
 **Português:** O Embraer EMB-312 Tucano é um avião de treinamento básico de assentos em tandem e motor turboélice, desenvolvido no Brasil no início da década de 1980. Inovador para a sua época, foi uma das primeiras aeronaves de treinamento a oferecer assentos ejetáveis escalonados, um canopy em bolha para excelente visibilidade e um console de instrumentos projetado para simular a sensação de pilotar um caça a jato. É impulsionado por um motor Pratt & Whitney Canada PT6A e tornou-se um grande sucesso de exportação, utilizado por diversas forças aéreas ao redor do mundo.
 
 **English:** The Embraer EMB-312 Tucano is a tandem-seat, turboprop basic trainer aircraft developed in Brazil in the early 1980s. Innovative for its time, it was one of the first training aircraft to offer stepped ejection seats, a bubble canopy for excellent visibility, and an instrument console designed to simulate the feel of flying a jet fighter. Powered by a Pratt & Whitney Canada PT6A engine, it became a massive export success, utilized by numerous air forces around the world.
@@ -16,11 +34,23 @@ Download in DCS page - https://www.digitalcombatsimulator.com/en/files/3349920/
 
 ![Tucano](Doc/shorts.jpg)
 
+![Tucano](Doc/short01.jpg)
+
+![Tucano](Doc/short02.jpg)
+
+![Tucano](Doc/short03.jpg)
+
+![Tucano](Doc/short04.jpg)
+
 **Português:** O Shorts Tucano (oficialmente designado como Tucano T1) é uma versão amplamente modificada do EMB-312 original, fabricada sob licença pela Short Brothers, na Irlanda do Norte, para a Força Aérea Real Britânica (RAF). A principal diferença é a motorização: para atingir os rigorosos requisitos de taxa de subida e velocidade da RAF, a aeronave recebeu um motor Garrett TPE331 muito mais potente, acoplado a uma hélice de quatro pás e escapamentos reposicionados. Além disso, possui fuselagem reforçada, freio aerodinâmico (airbrake) modificado e aviônicos britânicos.
 
 **English:** The Shorts Tucano (officially designated Tucano T1) is a heavily modified version of the original EMB-312, manufactured under license by Short Brothers in Northern Ireland for the British Royal Air Force (RAF). The primary difference is the powerplant: to meet the RAF's stringent climb rate and speed requirements, the aircraft was fitted with a significantly more powerful Garrett TPE331 engine, coupled with a four-bladed propeller and repositioned exhausts. Additionally, it features a strengthened airframe, a modified ventral airbrake, and British avionics.
 
 ## EMB-312F
+
+![Tucano](Doc/F-02.jpg)
+
+![Tucano](Doc/F-01.jpg)
 
 **Português:** O EMB-312F é uma variante especializada do Tucano, customizada especificamente para atender aos requisitos da Força Aérea Francesa (Armée de l'Air). Esta versão incorpora aviônicos de origem francesa (incluindo painéis da Bendix/King), reforços estruturais significativos para aumentar a vida útil da aeronave sob manobras de alto estresse (fadiga) e um sistema de freio aerodinâmico ventral semelhante ao do Shorts Tucano. A aeronave também foi equipada com sistemas avançados de degelo para operar de forma segura no rigoroso clima de inverno europeu.
 
