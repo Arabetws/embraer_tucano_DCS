@@ -18,7 +18,7 @@ Skins =
 	{
 		{
 			name	= "AT-27",
-			dir		= "Skins/1"
+			dir		= "Theme"
 		},
 	},
 Missions =
@@ -77,22 +77,22 @@ mount_vfs_liveries_path(current_mod_path .. "/Liveries")
 mount_vfs_texture_path	(current_mod_path ..  "/Skins/1/ME")
 mount_vfs_sound_path (current_mod_path.."/Sounds/")
 
-dofile(current_mod_path.."/LUA/Views.lua")
-dofile(current_mod_path..'/loadout.lua')
-dofile(current_mod_path..'/weapons.lua')
-dofile(current_mod_path..'/AT-27.lua')
-dofile(current_mod_path..'/MK1.lua')
-dofile(current_mod_path..'/EMB312F.lua')
-dofile(current_mod_path..'/T-27.lua')
+dofile(current_mod_path.."/Entry/Views.lua")
+dofile(current_mod_path..'/Entry/loadout.lua')
+dofile(current_mod_path..'/weapons/weapons.lua')
+dofile(current_mod_path..'/Entry/AT-27.lua')
+dofile(current_mod_path..'/Entry/MK1.lua')
+dofile(current_mod_path..'/Entry/EMB312F.lua')
+dofile(current_mod_path..'/Entry/T-27.lua')
 
 make_view_settings('AT-27', ViewSettings, SnapViews)
 make_view_settings('T-27', ViewSettings, SnapViews)
 make_view_settings('EMB-312F', ViewSettings, SnapViews)
 make_view_settings('MK1', ViewSettings, SnapViews)
 
-make_flyable('AT-27', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/comm.lua')
-make_flyable('T-27', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/comm.lua')
-make_flyable('EMB-312F', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/comm.lua')
-make_flyable('MK1', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/comm.lua')
+make_flyable('AT-27', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/Entry/comm.lua')
+make_flyable('T-27', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/Entry/comm.lua')
+make_flyable('EMB-312F', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/Entry/comm.lua')
+make_flyable('MK1', current_mod_path..'/Cockpit/Scripts/', nil , current_mod_path..'/Entry/comm.lua')
 
 plugin_done()
