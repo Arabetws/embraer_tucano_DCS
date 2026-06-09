@@ -33,13 +33,18 @@ EMB312FFM =  {
 			file        = EMB312F,
 			life        = 18,
 			vis         = 3,
-			desrt       = 'Fighter-2-crush',
+			desrt       = 'su-25-oblomok',
 			fire        = { 300, 2 },
 			username    = EMB312F,
 			index       = WSTYPE_PLACEHOLDER,
 			classname   = "lLandPlane",
 			positioning = "BYNORMAL",
 			drawonmap   = true,
+		},
+		{
+			name  = "su-25-oblomok";
+			file  = "su-25-oblomok";
+			fire  = { 240, 2};
 		},
 	},
 
@@ -161,7 +166,7 @@ EMB312FFM =  {
 			pos                     = { -0.8, 0.3, 0.1 },
 			canopy_pos              = { 2, 0.5, 0 },
 			ejection_added_speed    = { -4, 14.5, -0.4 },
-			ejection_play_arg       = 50,
+			ejection_play_arg       = 472,
 			can_be_playable         = false,
 			canopy_args             = { 38, 0.8 },
 			pilot_body_arg          = 472,
@@ -257,18 +262,21 @@ EMB312FFM =  {
 			prop_pitch_feather    = 87.0,
 			Nominal_RPM           = 2200,
 
-			-- Ajuste implementado aqui
-			table_data            =
-			{
-				{ 0.00, 11000 },
-				{ 0.10, 9500 },
-				{ 0.20, 8000 },
-				{ 0.30, 6500 },
-				{ 0.35, 5500 },
-				{ 0.40, 4800 },
-				{ 0.45, 3900 },
-				{ 0.50, 3100 },
-			},
+			table_data =
+            {
+                -- [Index] = {Mach, Dry Thrust (N), Afterburner Thrust (N)}
+                [1] =   {0.0,   15000.0,   15000.0}, -- Tração estática gerada pelo torque
+                [2] =   {0.1,   13970.0,   13970.0},
+                [3] =   {0.2,   6985.0,    6985.0},
+                [4] =   {0.3,   4656.7,    4656.7},
+                [5] =   {0.4,   3492.5,    3492.5},
+                [6] =   {0.5,   2794.0,    2794.0},
+                [7] =   {0.6,   2328.3,    2328.3},
+                [8] =   {0.7,   1995.7,    1995.7},
+                [9] =   {0.8,   1746.2,    1746.2},
+                -- Valores acima de Mach 0.6/0.7 não são reais para o voo nivelado do EMB-312, 
+                -- mas são exigidos pela engine para cálculo em mergulhos em VNE.
+            }, -- end of table_data
 		},
 	},
 	sounderName               = "Aircraft/Planes/AT-27",

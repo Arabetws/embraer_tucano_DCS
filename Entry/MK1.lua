@@ -21,13 +21,18 @@ SHORTSTFM =  {
 			file        = SHORTST,
 			life        = 18,
 			vis         = 3,
-			desrt       = 'Fighter-2-crush',
+			desrt       = 'su-25-oblomok',
 			fire        = { 300, 2 },
 			username    = SHORTST,
 			index       = WSTYPE_PLACEHOLDER,
 			classname   = "lLandPlane",
 			positioning = "BYNORMAL",
 			drawonmap   = true,
+		},
+		{
+			name  = "su-25-oblomok";
+			file  = "su-25-oblomok";
+			fire  = { 240, 2};
 		},
 	},
 
@@ -152,7 +157,7 @@ SHORTSTFM =  {
 			pos                     = { -0.8, 0.3, 0.1 },
 			canopy_pos              = { 2, 0.5, 0 },
 			ejection_added_speed    = { -4, 14.5, -0.4 },
-			ejection_play_arg       = 50,
+			ejection_play_arg       = 472,
 			can_be_playable         = false,
 			canopy_args             = { 38, 0.8 },
 			pilot_body_arg          = 472,
@@ -253,16 +258,19 @@ SHORTSTFM =  {
             Nominal_RPM           = 2000,  -- MODIFICADO: A RPM nominal da hélice no Garrett geralmente é fixada próxima a 2000 RPM em voo
 
             -- Curva de Empuxo (Thrust in Newtons) ajustada para o motor Garrett 1.100 SHP
-            table_data            =
+            table_data =
             {
-                { 0.00, 16000 }, -- Muito mais força de decolagem
-                { 0.10, 14500 },
-                { 0.20, 12500 },
-                { 0.30, 10500 },
-                { 0.40,  8500 },
-                { 0.50,  6500 }, -- Estendido para suportar a velocidade final de Mach 0.52 do Shorts
-                { 0.60,  5000 }, 
-            },
+                -- [Index] = {Mach, Dry Thrust (N), Afterburner Thrust (N)}
+                [1] =   {0.0,   22000.0,   22000.0}, -- Tração estática (aprox. p/ 1100 SHP)
+                [2] =   {0.1,   20489.3,   20489.3},
+                [3] =   {0.2,   10244.6,   10244.6},
+                [4] =   {0.3,   6829.8,    6829.8},
+                [5] =   {0.4,   5122.3,    5122.3},
+                [6] =   {0.5,   4097.9,    4097.9},
+                [7] =   {0.6,   3414.9,    3414.9},
+                [8] =   {0.7,   2927.0,    2927.0},
+                [9] =   {0.8,   2561.2,    2561.2},
+            }, -- end of table_data
         },
     },
 	sounderName               = "Aircraft/Planes/AT-27",

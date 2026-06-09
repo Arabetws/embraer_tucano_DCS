@@ -59,9 +59,17 @@ name = "AT-27 1428 2º/º3 Grupo de Aviação"
 countries = {}
 custom_args =
 {
-	[810] = 0.4, -- Pilot helmet
+	[810] = 0.2, -- Pilot helmet
 	[811] = 0, -- Helmet visor 0-close, 1-open
 	[812] = 0, -- Front helmet visor 0-close, 1-open
+	[813] = 1, -- 0: colete, 1: no colete
+
+	[814] = 0.2, -- Pilot helmet
+	[815] = 0, -- Helmet visor 0-close, 1-open
+	[816] = 0, -- Front helmet visor 0-close, 1-open
+	[817] = 1, -- 0: colete, 1: no colete
+	
+	[1000] = 1, -- Hud: 1, Base HUD: 0.5, No Hud: 0
 
 	[820] = 0.4, -- Antennas
 	[821] = 1, -- Down antenna

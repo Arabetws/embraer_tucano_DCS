@@ -59,9 +59,17 @@ name = "T-27 1335 Air Force Academy (AFA)"
 countries = {}
 custom_args =
 {
-	[810] = 0, -- Pilot helmet
+	[810] = 0.2, -- Pilot helmet
 	[811] = 0, -- Helmet visor 0-close, 1-open
 	[812] = 0, -- Front helmet visor 0-close, 1-open
+	[813] = 1, -- 0: colete, 1: no colete
+
+	[814] = 0.2, -- Pilot helmet
+	[815] = 0, -- Helmet visor 0-close, 1-open
+	[816] = 0, -- Front helmet visor 0-close, 1-open
+	[817] = 1, -- 0: colete, 1: no colete
+
+	[1000] = 0, -- Hud: 1, Base HUD: 0.5, No Hud: 0
 
 	[820] = 0, -- Antennas
 	[821] = 1, -- Down antenna
