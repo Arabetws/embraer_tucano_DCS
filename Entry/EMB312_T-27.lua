@@ -179,14 +179,14 @@ A27TFM = {
 	nose_gear_amortizer_direct_stroke        = 0.15, -- Curso de compressão menor que um jato
 	nose_gear_amortizer_reversal_stroke      = -0.10, -- Extensão quando sai do chão (up)
 	nose_gear_amortizer_normal_weight_stroke = -0.05, -- Compressão em repouso (peso normal)
-	nose_gear_door_close_after_retract       = true, -- O T-27 fecha as portas do alojamento frontal
+	--nose_gear_door_close_after_retract       = true, -- O T-27 fecha as portas do alojamento frontal
 
 	-- TREM DE POUSO PRINCIPAL (Main Gear)
 	-- {X (atrás do CG), Y (altura), Z (metade da bitola)}
 	main_gear_amortizer_direct_stroke        = 0.20, -- Curso do amortecedor principal
 	main_gear_amortizer_reversal_stroke      = -0.15, -- Extensão da perna ao decolar (up)
 	main_gear_amortizer_normal_weight_stroke = -0.05, -- Posição da suspensão com avião parado
-	main_gear_door_close_after_retract       = false, -- As pernas principais ficam presas à carenagem externa
+	--main_gear_door_close_after_retract       = false, -- As pernas principais ficam presas à carenagem externa
 	-----------------------------------------------------------------------
 	----------------- SUSPENSION CODE ENDS --------------------------------
 	-----------------------------------------------------------------------
@@ -440,6 +440,88 @@ A27TFM = {
 			arg = 472,
 			argTbl = { [true] = 0.5, [false] = 0 }
 		},
+		{ id = "PilotHelmet" , control = 'comboList', label = _('Pilot helmet customization'),
+          values = {{id =  0, dispName = _("helmet 1"), value = 0.0},
+                    {id =  1, dispName = _("helmet 2"), value = 0.2},
+                    {id =  2, dispName = _("helmet 3"), value = 0.4},
+                    {id =  3, dispName = _("helmet 4"), value = 0.3}},
+          defValue  = 1,
+          wCtrl     = 150,
+          arg = 810,
+        },
+
+		{ id = "PilotHelmetVisor" , control = 'comboList', label = _('Pilot helmet Visor'),
+			playerOnly = false,
+			defValue  = 0,
+			arg = 811, 
+			wCtrl     = 150,
+          values = {{id =  0, dispName = _("Close"), value = 0.0},
+                    {id =  1, dispName = _("Open"), value = 1.0},},
+        },
+
+		{ id = "InstructorHelmet" , control = 'comboList', label = _('Instructor helmet customization'),
+          values = {{id =  0, dispName = _("helmet 1"), value = 0.0},
+                    {id =  1, dispName = _("helmet 2"), value = 0.2},
+                    {id =  2, dispName = _("helmet 3"), value = 0.4},
+                    {id =  3, dispName = _("helmet 4"), value = 0.3}},
+          defValue  = 1,
+          wCtrl     = 150,
+          arg = 814, 
+        },
+		{ id = "InstructorHelmetVisor" , control = 'comboList', label = _('Instructor helmet Visor'),
+			playerOnly = false,
+			defValue  = 0,
+			arg = 815, 
+			wCtrl     = 150,
+          values = {{id =  0, dispName = _("Close"), value = 0.0},
+                    {id =  1, dispName = _("Open"), value = 1.0},},
+        },
 	},
+
+	lights_data                              = {
+		typename = "collection",
+		lights = {
+			[WOLALIGHT_STROBES] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argnatostrobelight", argument = 201, period = 1.2 }, -- beacon lights
+					{ typename = "argnatostrobelight", argument = 202, period = 1.2 },
+				},
+			}, --must be collection
+			[WOLALIGHT_LANDING_LIGHTS] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argumentlight", argument = 209, },
+				},
+			},
+			[WOLALIGHT_TAXI_LIGHTS] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argumentlight", argument = 208, },
+				},
+			},
+			[WOLALIGHT_NAVLIGHTS] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argumentlight", argument = 190, }, --
+					{ typename = "argumentlight", argument = 191, }, --
+					{ typename = "argumentlight", argument = 192, }, --
+				}
+			},
+			[WOLALIGHT_FORMATION_LIGHTS] = {
+				typename = "collection",
+				lights = {
+					{
+						typename = "argumentlight", argument = 200,
+					},
+				},
+			},
+		}
+	},
+
+
+
+	ViewSettings = ViewSettings,
+	SnapViews    = SnapViews,
 }
 add_aircraft(A27TFM)

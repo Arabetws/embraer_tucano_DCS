@@ -139,7 +139,7 @@ A27TFM = {
 	mapclasskey                              = "P0091000025",
 	attribute                                = { wsType_Air, wsType_Airplane, wsType_Fighter, WSTYPE_PLACEHOLDER, "Battleplanes", },
 	-- Correção da Categoria para comportamento realista da IA
-	Categories                               = { },
+	Categories                               = {},
 
 	-- Dados Físicos AT-27 (PT-6A)
 	M_empty                                  = 1810, -- kg
@@ -168,10 +168,10 @@ A27TFM = {
 	has_afteburner                           = false,
 	has_speedbrake                           = false,
 
-	flaps_transmission = "Electrical",
-	undercarriage_transmission = "Hydraulic",
-	undercarriage_movement 		= 5,
-	has_differential_stabilizer = false,
+	flaps_transmission                       = "Electrical",
+	undercarriage_transmission               = "Hydraulic",
+	undercarriage_movement                   = 5,
+	has_differential_stabilizer              = false,
 
 	nose_gear_pos                            = { 2.883, -1.55, 0.0 },
 	main_gear_pos                            = { -0.122, -1.6, 1.748 },
@@ -440,36 +440,88 @@ A27TFM = {
 			arg = 1000,
 			argTbl = { [true] = 1, [false] = 0.0 }
 		},
-		--[[{ id = "PilotHelmet" , control = 'comboList', label = _('Pilot helmet customization'),
-          values = {{id =  0, dispName = _("helmet 1")},
-                    {id =  1, dispName = _("helmet 2")},
-                    {id =  2, dispName = _("helmet 3")},
-                    {id =  3, dispName = _("helmet 4")}},
+		{ id = "PilotHelmet" , control = 'comboList', label = _('Pilot helmet customization'),
+          values = {{id =  0, dispName = _("helmet 1"), value = 0.0},
+                    {id =  1, dispName = _("helmet 2"), value = 0.2},
+                    {id =  2, dispName = _("helmet 3"), value = 0.4},
+                    {id =  3, dispName = _("helmet 4"), value = 0.3}},
           defValue  = 1,
           wCtrl     = 150,
-          arg = 810, -- O número do seu argumento no modelo externo
-          argTbl = {
-              [0]  = 0.0, 
-              [1]  = 0.2, 
-              [2] = 0.4, 
-              [3] = 0.3  
-          }
+          arg = 810,
         },
+
+		{ id = "PilotHelmetVisor" , control = 'comboList', label = _('Pilot helmet Visor'),
+			playerOnly = false,
+			defValue  = 0,
+			arg = 811, 
+			wCtrl     = 150,
+          values = {{id =  0, dispName = _("Close"), value = 0.0},
+                    {id =  1, dispName = _("Open"), value = 1.0},},
+        },
+
 		{ id = "InstructorHelmet" , control = 'comboList', label = _('Instructor helmet customization'),
-          values = {{id =  0, dispName = _("helmet 1")},
-                    {id =  1, dispName = _("helmet 2")},
-                    {id =  2, dispName = _("helmet 3")},
-                    {id =  3, dispName = _("helmet 4")}},
+          values = {{id =  0, dispName = _("helmet 1"), value = 0.0},
+                    {id =  1, dispName = _("helmet 2"), value = 0.2},
+                    {id =  2, dispName = _("helmet 3"), value = 0.4},
+                    {id =  3, dispName = _("helmet 4"), value = 0.3}},
           defValue  = 1,
           wCtrl     = 150,
-          arg = 814, -- O número do seu argumento no modelo externo
-          argTbl = {
-              [0]  = 0.0, 
-              [1]  = 0.2, 
-              [2] = 0.4, 
-              [3] = 0.3 
-          }
-        },]]--
+          arg = 814, 
+        },
+		{ id = "InstructorHelmetVisor" , control = 'comboList', label = _('Instructor helmet Visor'),
+			playerOnly = false,
+			defValue  = 0,
+			arg = 815, 
+			wCtrl     = 150,
+          values = {{id =  0, dispName = _("Close"), value = 0.0},
+                    {id =  1, dispName = _("Open"), value = 1.0},},
+        },
 	},
+
+	lights_data                              = {
+		typename = "collection",
+		lights = {
+			[WOLALIGHT_STROBES] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argnatostrobelight", argument = 201, period = 1.2 }, -- beacon lights
+					{ typename = "argnatostrobelight", argument = 202, period = 1.2 },
+				},
+			}, --must be collection
+			[WOLALIGHT_LANDING_LIGHTS] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argumentlight", argument = 209, },
+				},
+			},
+			[WOLALIGHT_TAXI_LIGHTS] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argumentlight", argument = 208, },
+				},
+			},
+			[WOLALIGHT_NAVLIGHTS] = {
+				typename = "collection",
+				lights   = {
+					{ typename = "argumentlight", argument = 190, }, --
+					{ typename = "argumentlight", argument = 191, }, --
+					{ typename = "argumentlight", argument = 192, }, --
+				}
+			},
+			[WOLALIGHT_FORMATION_LIGHTS] = {
+				typename = "collection",
+				lights = {
+					{
+						typename = "argumentlight", argument = 200,
+					},
+				},
+			},
+		}
+	},
+
+
+
+	ViewSettings = ViewSettings,
+	SnapViews    = SnapViews,
 }
 add_aircraft(A27TFM)
