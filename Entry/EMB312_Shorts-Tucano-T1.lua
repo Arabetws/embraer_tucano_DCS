@@ -125,10 +125,10 @@ SHORTSTFM = {
 
 	CAS_min                                  = 40, -- m/s (Velocidade de estol ligeiramente ajustada)
 	V_opt                                    = 113, -- m/s (Velocidade de cruzeiro ~407 km/h ou 220 knots)
-	V_take_off                               = 38, -- m/s
-	V_land                                   = 35, -- m/s
-	V_max_sea_level                          = 141, -- m/s (Velocidade máxima aumentada para ~507 km/h ou 274 knots)
-	V_max_h                                  = 141, -- m/s
+	V_take_off                               = 35, -- m/s
+	V_land                                   = 30, -- m/s
+	V_max_sea_level                          = 150, -- m/s (Velocidade máxima aumentada para ~507 km/h ou 274 knots)
+	V_max_h                                  = 290, -- m/s
 	Vy_max                                   = 17.8, -- m/s (Taxa de subida absurdamente maior: 3.510 ft/min no Shorts vs 2.200 ft/min no Embraer)
 	Mach_max                                 = 0.52, -- Limite de Mach estrutural aumentado
 
@@ -302,12 +302,12 @@ SHORTSTFM = {
 	{
 		aerodynamics =
 		{
-			Cy0        = 0.18,
-			Mzalfa     = 4.5,
-			Mzalfadt   = 0.8,
-			kjx        = 2.25,
-			kjz        = 0.001,
-			Czbe       = -0.012,
+			Cy0        = 0.2050,
+			Mzalfa     = 4.600,
+			Mzalfadt   = 0.90,
+			kjx        = 2.75,
+			kjz        = 0.00150,
+			Czbe       = -0.064,
 
 			cx_gear    = 0.0268,
 			cx_flap    = 0.140,
@@ -403,15 +403,15 @@ SHORTSTFM = {
 			table_data            =
 			{
 				-- [Index] = {Mach, Dry Thrust (N), Afterburner Thrust (N)}
-				[1] = { 0.0, 22000.0, 22000.0 }, -- Tração estática (aprox. p/ 1100 SHP)
-				[2] = { 0.1, 20489.3, 20489.3 },
-				[3] = { 0.2, 10244.6, 10244.6 },
-				[4] = { 0.3, 6829.8, 6829.8 },
-				[5] = { 0.4, 5122.3, 5122.3 },
-				[6] = { 0.5, 4097.9, 4097.9 },
-				[7] = { 0.6, 3414.9, 3414.9 },
-				[8] = { 0.7, 2927.0, 2927.0 },
-				[9] = { 0.8, 2561.2, 2561.2 },
+				[1] = { 0.0, 30000.0, 30000.0 }, -- Tração estática (aprox. p/ 1100 SHP)
+				[2] = { 0.1, 25489.3, 25489.3 },
+				[3] = { 0.2, 20244.6, 20244.6 },
+				[4] = { 0.3, 10829.8, 10829.8 },
+				[5] = { 0.4, 10122.3, 10122.3 },
+				[6] = { 0.5, 9097.9, 9097.9 },
+				[7] = { 0.6, 6414.9, 6414.9 },
+				[8] = { 0.7, 4927.0, 4927.0 },
+				[9] = { 0.8, 4561.2, 4561.2 },
 			}, -- end of table_data
 		},
 	},

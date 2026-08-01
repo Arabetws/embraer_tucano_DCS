@@ -4,6 +4,14 @@ local armamentos_IN   = {}
 
 local armamentosClean = { { CLSID = "<CLEAN>", arg_value = 1 } }
 local armamentosTank  = { { CLSID = "{AT27_TANK}" }, }
+local armamentosSmoke = {
+	{ CLSID = "{SMOKE-WHITE-T27}" },
+	{ CLSID = "{SMOKE-RED-T27}" },
+	{ CLSID = "{SMOKE-GREEN-T27}" },
+	{ CLSID = "{SMOKE-BLACK-T27}" },
+	{ CLSID = "{SMOKE-ORANGE-T27}" },
+	{ CLSID = "{SMOKE-YELLOW-T27}" },
+}
 
 for _, v in ipairs(armamentosTank) do
 	table.insert(armamentos_IN, v)
@@ -143,12 +151,12 @@ A27TFM = {
 	average_fuel_consumption                 = 0.055, -- kg/s
 
 	CAS_min                                  = 45,
-	V_opt                                    = 122, -- m/s
-	V_take_off                               = 38, -- m/s
-	V_land                                   = 34, -- m/s
-	V_max_sea_level                          = 127, -- m/s
-	V_max_h                                  = 125, -- m/s
-	Vy_max                                   = 11.3, -- m/s
+	V_opt                                    = 140, -- m/s
+	V_take_off                               = 35, -- m/s
+	V_land                                   = 30, -- m/s
+	V_max_sea_level                          = 280, -- m/s
+	V_max_h                                  = 290, -- m/s
+	Vy_max                                   = 14.5, -- m/s
 	Mach_max                                 = 0.45,
 	Ny_min                                   = -3.0,
 	Ny_max                                   = 6.0,
@@ -305,6 +313,19 @@ A27TFM = {
 			},
 			armamentos_IN
 		),
+		-- Slot dedicado de fumaca -- Pylon4 confirmado seguro no teste isolado anterior.
+		-- Mantendo o mesmo formato de declare_loadout (com Elements/shape_table_data) ja
+		-- comprovado em jogo, sem misturar com outra variavel nao testada ainda.
+		pylon(3, 0, 0, 0, 0,
+			{
+				arg = 311,
+				arg_value = 0.2,
+				DisplayName = "Smoke",
+				use_full_connector_position = true,
+				connector = "Pylon4",
+			},
+			armamentosSmoke
+		),
 	},
 	-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -318,12 +339,12 @@ A27TFM = {
 	{
 		aerodynamics =
 		{
-			Cy0        = 0.18,
-			Mzalfa     = 4.5,
-			Mzalfadt   = 0.8,
-			kjx        = 2.25,
-			kjz        = 0.001,
-			Czbe       = -0.012,
+			Cy0        = 0.09,   -- reduzido de 0.2050: menos assimetria de sustentação normal/invertido (câmber da asa)
+			Mzalfa     = 3.7,    -- reduzido de 4.600: menos estabilidade longitudinal engessada, arfagem mais responsiva
+			Mzalfadt   = 0.65,   -- reduzido de 0.90: menos amortecimento, entrada/saída de invertido mais ágil
+			kjx        = 2.75,
+			kjz        = 0.00150,
+			Czbe       = -0.064,
 
 			cx_gear    = 0.0268,
 			cx_flap    = 0.140,
@@ -373,15 +394,15 @@ A27TFM = {
 
 			table_data         =
 			{
-				[1] = { 0.00, 6200 },
-				[2] = { 0.10, 6500 },
-				[3] = { 0.20, 6700 },
-				[4] = { 0.30, 6600 },
-				[5] = { 0.40, 6300 },
-				[6] = { 0.50, 5900 },
-				[7] = { 0.60, 5300 },
-				[8] = { 0.70, 4500 },
-				[9] = { 0.80, 3500 },
+				[1] = { 0.00, 16200 },
+				[2] = { 0.10, 16500 },
+				[3] = { 0.20, 16700 },
+				[4] = { 0.30, 16600 },
+				[5] = { 0.40, 16300 },
+				[6] = { 0.50, 15900 },
+				[7] = { 0.60, 15300 },
+				[8] = { 0.70, 14500 },
+				[9] = { 0.80, 13500 },
 			}
 		},
 		]]--
@@ -414,15 +435,15 @@ A27TFM = {
 			table_data            =
 			{
 				-- [Index] = {Mach, Dry Thrust (N), Afterburner Thrust (N)}
-				[1] = { 0.0, 15000.0, 15000.0 }, -- Tração estática gerada pelo torque
-				[2] = { 0.1, 13970.0, 13970.0 },
-				[3] = { 0.2, 6985.0, 6985.0 },
-				[4] = { 0.3, 4656.7, 4656.7 },
-				[5] = { 0.4, 3492.5, 3492.5 },
-				[6] = { 0.5, 2794.0, 2794.0 },
-				[7] = { 0.6, 2328.3, 2328.3 },
-				[8] = { 0.7, 1995.7, 1995.7 },
-				[9] = { 0.8, 1746.2, 1746.2 },
+				[1] = { 0.0, 25000.0, 25000.0 }, -- Tração estática gerada pelo torque
+				[2] = { 0.1, 23970.0, 23970.0 },
+				[3] = { 0.2, 12985.0, 12985.0 },
+				[4] = { 0.3, 8656.7, 8656.7 },
+				[5] = { 0.4, 6492.5, 6492.5 },
+				[6] = { 0.5, 4794.0, 4794.0 },
+				[7] = { 0.6, 4328.3, 4328.3 },
+				[8] = { 0.7, 3995.7, 3995.7 },
+				[9] = { 0.8, 2746.2, 2746.2 },
 				-- Valores acima de Mach 0.6/0.7 não são reais para o voo nivelado do EMB-312,
 				-- mas são exigidos pela engine para cálculo em mergulhos em VNE.
 			}, -- end of table_data

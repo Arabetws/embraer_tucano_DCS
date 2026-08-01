@@ -1,4 +1,5 @@
 livery = {
+	{ "t27_mirrors", 0, "mirrors", true }, -- dynamic mirror replacement texture (correção)
 	{ "AT27",         DIFFUSE,               "at-27_fuselage",             false },
 	{ "AT27",         NORMAL_MAP,            "shorts_fuselage_nm",         true },
 	{ "AT27",         ROUGHNESS_METALLIC,    "shortsGB_Fuselage_RoughMet", true },

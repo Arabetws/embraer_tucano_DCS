@@ -152,12 +152,12 @@ A27TFM = {
 	average_fuel_consumption                 = 0.055, -- kg/s
 
 	CAS_min                                  = 45,
-	V_opt                                    = 122, -- m/s
-	V_take_off                               = 38, -- m/s
-	V_land                                   = 34, -- m/s
-	V_max_sea_level                          = 127, -- m/s
-	V_max_h                                  = 125, -- m/s
-	Vy_max                                   = 11.3, -- m/s
+	V_opt                                    = 200, -- m/s
+	V_take_off                               = 35, -- m/s
+	V_land                                   = 30, -- m/s
+	V_max_sea_level                          = 280, -- m/s
+	V_max_h                                  = 290, -- m/s
+	Vy_max                                   = 14.5, -- m/s
 	Mach_max                                 = 0.45,
 	Ny_min                                   = -3.0,
 	Ny_max                                   = 6.0,
@@ -353,12 +353,12 @@ A27TFM = {
 	{
 		aerodynamics =
 		{
-			Cy0        = 0.18,
-			Mzalfa     = 4.5,
-			Mzalfadt   = 0.8,
-			kjx        = 2.25,
-			kjz        = 0.001,
-			Czbe       = -0.012,
+			Cy0        = 0.2050,
+			Mzalfa     = 4.600,
+			Mzalfadt   = 0.90,
+			kjx        = 2.75,
+			kjz        = 0.00150,
+			Czbe       = -0.064,
 
 			cx_gear    = 0.0268,
 			cx_flap    = 0.140,
@@ -405,15 +405,15 @@ A27TFM = {
 			table_data            =
 			{
 				-- [Index] = {Mach, Dry Thrust (N), Afterburner Thrust (N)}
-				[1] = { 0.0, 15000.0, 15000.0 }, -- Tração estática gerada pelo torque
-				[2] = { 0.1, 13970.0, 13970.0 },
-				[3] = { 0.2, 6985.0, 6985.0 },
-				[4] = { 0.3, 4656.7, 4656.7 },
-				[5] = { 0.4, 3492.5, 3492.5 },
-				[6] = { 0.5, 2794.0, 2794.0 },
-				[7] = { 0.6, 2328.3, 2328.3 },
-				[8] = { 0.7, 1995.7, 1995.7 },
-				[9] = { 0.8, 1746.2, 1746.2 },
+				[1] = { 0.0, 25000.0, 25000.0 }, -- Tração estática gerada pelo torque
+				[2] = { 0.1, 20970.0, 20970.0 },
+				[3] = { 0.2, 10985.0, 10985.0 },
+				[4] = { 0.3, 10656.7, 10656.7 },
+				[5] = { 0.4, 8492.5, 8492.5 },
+				[6] = { 0.5, 7794.0, 7794.0 },
+				[7] = { 0.6, 6328.3, 6328.3 },
+				[8] = { 0.7, 4995.7, 4995.7 },
+				[9] = { 0.8, 4746.2, 4746.2 },
 				-- Valores acima de Mach 0.6/0.7 não são reais para o voo nivelado do EMB-312,
 				-- mas são exigidos pela engine para cálculo em mergulhos em VNE.
 			}, -- end of table_data
