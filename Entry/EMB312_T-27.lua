@@ -101,7 +101,7 @@ A27TFM = {
 		308, -- pylons
 		309, -- pylons
 		310, -- pylons
-		311, -- pylons
+		311, -- pylons (nao mais usado pelo Smoke -- ver Pylons abaixo)
 		312, -- pylons
 		-- 337, -- back pilot head left right
 		-- 399, -- back pilot head up down
@@ -313,16 +313,16 @@ A27TFM = {
 			},
 			armamentos_IN
 		),
-		-- Slot dedicado de fumaca -- Pylon4 confirmado seguro no teste isolado anterior.
-		-- Mantendo o mesmo formato de declare_loadout (com Elements/shape_table_data) ja
-		-- comprovado em jogo, sem misturar com outra variavel nao testada ainda.
+		-- Slot dedicado de fumaca no connector "SmokePoint" -- independente dos pylons fisicos
+		-- de asa. Sem "arg"/"arg_value": o rack fisico do pylon (peca de "ferragem" que
+		-- sobe/desce/aparece) nao precisa mais ser acionado, ja que o pod em si ja e
+		-- invisivel por design (shape_table_data aponta para .edm inexistente). Isso evita
+		-- que o slot de fumaca dependa ou interfira nos pylons 2 e 3.
 		pylon(3, 0, 0, 0, 0,
 			{
-				arg = 311,
-				arg_value = 0.2,
 				DisplayName = "Smoke",
 				use_full_connector_position = true,
-				connector = "Pylon4",
+				connector = "SmokePoint",
 			},
 			armamentosSmoke
 		),

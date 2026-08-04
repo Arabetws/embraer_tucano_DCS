@@ -28,12 +28,17 @@ declare_loadout({
 })
 
 ------------------------------------------------------------------------------------------------------------
--- Smoke -- somente variante EMB312_T-27, montado no Pylon4 dedicado (comprovado seguro).
+-- Smoke -- somente variante EMB312_T-27, montado no connector "SmokePoint" (dedicado, fora do
+-- sistema fisico de pylons de asa).
 -- IMPORTANTE: Elements/shape_table_data sao OBRIGATORIOS para o motor do DCS aceitar um
 -- declare_loadout de CAT_PODS -- testado e confirmado (removê-los quebra o carregamento do
 -- banco de armas do jogo inteiro). Ficam apontando para "T27_SMOKE-POD"/"smoke_pod", que nao
 -- existem como .edm real -- e por isso o pod ja fica INVISIVEL na pratica (nada pra renderizar),
 -- sem precisar remover a tabela Elements. So o efeito de fumaca (campo Smoke) aparece.
+--
+-- dx/dy zerados: offset era calibrado para compensar a posicao do Pylon4 (embaixo da asa);
+-- agora que o connector SmokePoint ja fica na posicao correta, nao precisa mais de compensacao.
+-- alpha reduzido: rastro estava denso/grosso demais visualmente (feedback em teste no jogo).
 ------------------------------------------------------------------------------------------------------------
 
 declare_loadout(
@@ -46,12 +51,12 @@ declare_loadout(
 
 		attribute	=	{4,	15,	50,	WSTYPE_PLACEHOLDER},
 		Smoke  = {
-			alpha = 180,
+			alpha = 220,
 			r  = 255,
 			g  = 255,
 			b  = 255,
-			dx = -1.455,
-			dy = -0.062
+			dx = 0,
+			dy = 0
 		},
 
 		shape_table_data =
@@ -86,12 +91,12 @@ declare_loadout(
 
 		attribute	=	{4,	15,	50,	WSTYPE_PLACEHOLDER},
 		Smoke  = {
-			alpha = 180,
+			alpha = 190,
 			r  = 204,
 			g  = 0,
 			b  = 51,
-			dx = -1.455,
-			dy = -0.062
+			dx = 0,
+			dy = 0
 		},
 
 		shape_table_data =
@@ -126,12 +131,12 @@ declare_loadout(
 
 		attribute	=	{4,	15,	50,	WSTYPE_PLACEHOLDER},
 		Smoke  = {
-			alpha = 180,
+			alpha = 190,
 			r  = 34,
 			g  = 139,
 			b  = 34,
-			dx = -1.455,
-			dy = -0.062
+			dx = 0,
+			dy = 0
 		},
 
 		shape_table_data =
@@ -166,12 +171,12 @@ declare_loadout(
 
 		attribute	=	{4,	15,	50,	WSTYPE_PLACEHOLDER},
 		Smoke  = {
-			alpha = 100,
+			alpha = 90,
 			r  = 0,
 			g  = 0,
 			b  = 20,
-			dx = -1.455,
-			dy = -0.062
+			dx = 0,
+			dy = 0
 		},
 
 		shape_table_data =
@@ -206,12 +211,12 @@ declare_loadout(
 
 		attribute		=	{4,	15,	50,	WSTYPE_PLACEHOLDER},
 		Smoke  = {
-			alpha = 180,
+			alpha = 190,
 			r  = 255,
 			g  = 108,
 			b  = 0,
-			dx = -1.455,
-			dy = -0.062
+			dx = 0,
+			dy = 0
 		},
 
 		shape_table_data =
@@ -246,12 +251,12 @@ declare_loadout(
 
 		attribute		=	{4,	15,	50,	WSTYPE_PLACEHOLDER},
 		Smoke  = {
-			alpha = 180,
+			alpha = 190,
 			r  = 255,
 			g  = 218,
 			b  = 0,
-			dx = -1.455,
-			dy = -0.062
+			dx = 0,
+			dy = 0
 		},
 
 		shape_table_data =

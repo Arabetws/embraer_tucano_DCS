@@ -1,0 +1,10 @@
+model = 
+{
+	lods = 
+	{		
+		{"AT-27.edm",500.000000}; 
+		{"AT-27_lod1.edm",2000.000000};
+		{"AT-27_lod2.edm",7000.000000};
+	};
+	collision_shell = "AT-27.edm";
+}
